@@ -8,17 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dropAreaList.forEach((dropArea) => {
         dropArea.addEventListener('dragover', (e) => {
-            e.preventDefault()
-            dropArea.classList.add('droppable-area--active')
+            e.preventDefault();
+            dropArea.classList.add('droppable-area--active');
         })
         dropArea.addEventListener('dragleave', () => {
-            dropArea.classList.remove('droppable-area--active')
+            dropArea.classList.remove('droppable-area--active');
         })
 
         dropArea.addEventListener('drop', (e) => {
-            e.preventDefault()
+            e.preventDefault();
             const alreadyPlacedAnswer = dropArea.querySelector('.answer');
             if (alreadyPlacedAnswer) {
+                alreadyPlacedAnswer.classList.remove('answer--right');
                 answersList.appendChild(alreadyPlacedAnswer);
             }
             dropArea.appendChild(selectedAnswer);
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             task.classList.add('task--filled');
         }
         else {
-            task.classList.remove('task--filled')
+            task.classList.remove('task--filled');
         }
     }
 
