@@ -1,0 +1,147 @@
+.task {
+  position: relative;
+  min-height: 100vh;
+  padding-top: pxToRem(78);
+  padding-bottom: pxToRem(60);
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: pxToRem(32);
+    font-family: $font-secondary;
+    font-size: pxToRem(55);
+    line-height: pxToRem(63);
+    font-weight: 700;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-bottom: pxToRem(8);
+    font-size: pxToRem(31);
+    line-height: pxToRem(42);
+    font-weight: 500;
+    letter-spacing: .02em;
+    color: $color-white;
+
+    &--hint {
+      margin-bottom: pxToRem(21);
+      font-style: italic;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: pxToRem(27);
+
+    &--drop {
+      margin-bottom: pxToRem(44);
+    }
+  }
+
+  &__col {
+    padding: pxToRem(14) pxToRem(16) pxToRem(29);
+    background-color: $color-white;
+  }
+
+  &__col-title {
+    min-height: pxToRem(149);
+    font-size: pxToRem(32);
+    line-height: pxToRem(42);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__droppable-area {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: pxToRem(10);
+    }
+  }
+
+  &__bottom-box {
+  }
+
+  &__bottom-col {
+    &--result {
+      text-align: right;
+    }
+  }
+
+  &__pagination {
+  }
+
+  &__result {
+    display: none;
+    position: relative;
+    padding: pxToRem(3) pxToRem(10);
+    background-color: $color-yellow-active;
+    font-family: $font-secondary;
+    font-size: pxToRem(55);
+    line-height: 1;
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 50vw;
+      height: 100%;
+      background-color: $color-yellow-active;
+      content: "";
+    }
+
+    .task--checking &,
+    .task--completed & {
+      display: inline-block;
+    }
+  }
+
+  &__answers {
+    position: relative;
+    width: 100%;
+    height: pxToRem(111);
+
+    .task--filled & {
+      display: none;
+    }
+  }
+
+  &__button-box {
+    display: none;
+    text-align: center;
+
+    .task--filled & {
+      display: block;
+    }
+
+    .task--checking &,
+    .task--completed &{
+      display: none;
+    }
+  }
+
+  &__button {
+    padding: pxToRem(28) pxToRem(35);
+    border: none;
+    background-color: $color-yellow;
+    font-family: $font-primary;
+    font-size: pxToRem(28);
+    line-height: pxToRem(26);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color $transition-default;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: $color-yellow-active;
+    }
+  }
+}

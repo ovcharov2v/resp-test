@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <title>Test</title>
+</head>
+<body>
+    <section class="task">
+        <div class="container">
+            <h1 class="task__title">Задание</h1>
+            <p class="task__description">Распределите задачи по соответствующим уровням категорийных менеджеров.</p>
+            <p class="task__description task__description--hint">Вы можете менять порядок блоков и после их перемещения</p>
+            <div class="task__grid task__grid--drop">
+                <div class="task__col" data-col-id="1">
+                    <p class="task__col-title">Руководители отдела сопутствующих товаров и услуг (ОСТиУ)</p>
+                    <div class="task__droppable-area droppable-area" data-area-id="11"></div>
+                    <div class="task__droppable-area droppable-area" data-area-id="12"></div>
+                    <div class="task__droppable-area droppable-area" data-area-id="13"></div>
+                </div>
+                <div class="task__col" data-col-id="2">
+                    <p class="task__col-title">Категорийные менеджеры, менеджеры товарных категорий ОСТиУ ОГ НПО</p>
+                    <div class="task__droppable-area droppable-area" data-area-id="21"></div>
+                    <div class="task__droppable-area droppable-area" data-area-id="22"></div>
+                    <div class="task__droppable-area droppable-area" data-area-id="23"></div>
+                </div>
+                <div class="task__col" data-col-id="3">
+                    <p class="task__col-title">Сотрудники АЗК</p>
+                    <div class="task__droppable-area droppable-area" data-area-id="31"></div>
+                    <div class="task__droppable-area droppable-area" data-area-id="32"></div>
+                    <div class="task__droppable-area droppable-area" data-area-id="33"></div>
+                </div>
+            </div>
+            <div class="task__grid">
+                <div class="task__bottom-col">
+                    <div class="pagination">
+                        <button class="button-arrow button-arrow--prev"></button>
+                        <p class="pagination__value">1/23</p>
+                        <button class="button-arrow button-arrow--next"></button>
+                    </div>
+                </div>
+                <div class="task__bottom-col">
+                    <div class="task__answers">
+                        <div class="task__answer answer" draggable="true" data-key="33">Обеспечение стандартов выкладки </div>
+                        <div class="task__answer answer" draggable="true" data-key="23">Взаимодействие с поставщиками <br>и производителями</div>
+                        <div class="task__answer answer" draggable="true" data-key="13">Повышение конкурентоспособности <br>сети в регионе</div>
+                        <div class="task__answer answer" draggable="true" data-key="32">Сокращение издержек за счет <br>работы с товарным запасом и достижения минимальных списаний</div>
+                        <div class="task__answer answer" draggable="true" data-key="22">Обеспечение <br>конкурентоспособной цены</div>
+                        <div class="task__answer answer" draggable="true" data-key="12">Анализ влияния продаж <br>сопутствующих товаров и услуг <br>на трафик нефтепродуктов</div>
+                        <div class="task__answer answer" draggable="true" data-key="31">Размещение заказа поставщик, <br>контроль заказа и приемка</div>
+                        <div class="task__answer answer" draggable="true" data-key="21">Разработка и внедрение <br>планограмм категорий</div>
+                        <div class="task__answer answer" draggable="true" data-key="11">Распределение полочного <br>пространства по группам товаров</div>
+                    </div>
+                    <div class="task__button-box">
+                        <button class="task__button task__button--check" data-retry-text="Попробовать еще раз">Проверить</button>
+                    </div>
+                </div>
+                <div class="task__bottom-col task__bottom-col--result">
+                    <p class="task__result" data-wrong-text="Неверно!" data-right-text="Верно!">Верно!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

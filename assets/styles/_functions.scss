@@ -1,0 +1,4 @@
+@function pxToRem($value) {
+  $result: #{($value / $base-font-size-value) + "rem"};
+  @return $result;
+}

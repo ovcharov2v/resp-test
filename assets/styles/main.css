@@ -1,0 +1,335 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "DrukTextWideCyr-Bold";
+  src: url("../fonts/druktextwidecyr-bold.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/druktextwidecyr-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/druktextwidecyr-bold.woff2") format("woff2"), url("../fonts/druktextwidecyr-bold.woff") format("woff"), url("../fonts/druktextwidecyr-bold.ttf") format("truetype"), url("../fonts/druktextwidecyr-bold.svg#druktextwidecyr-bold") format("svg"); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/Formular-MediumItalic.eot");
+  src: local("Formular Medium Italic"), local("Formular-MediumItalic"), url("../fonts/Formular-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Formular-MediumItalic.woff2") format("woff2"), url("../fonts/Formular-MediumItalic.woff") format("woff"), url("../fonts/Formular-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/Formular.eot");
+  src: local("Formular"), url("../fonts/Formular.eot?#iefix") format("embedded-opentype"), url("../fonts/Formular.woff2") format("woff2"), url("../fonts/Formular.woff") format("woff"), url("../fonts/Formular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/Formular-Medium.eot");
+  src: local("Formular Medium"), local("Formular-Medium"), url("../fonts/Formular-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Formular-Medium.woff2") format("woff2"), url("../fonts/Formular-Medium.woff") format("woff"), url("../fonts/Formular-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Formular";
+  font-display: swap;
+  src: url("../fonts/Formular-Bold.eot");
+  src: local("Formular Bold"), local("Formular-Bold"), url("../fonts/Formular-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Formular-Bold.woff2") format("woff2"), url("../fonts/Formular-Bold.woff") format("woff"), url("../fonts/Formular-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 0.9444444444vw;
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: "Formular", sans-serif;
+  color: #000;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 3.5555555556rem;
+  padding-right: 3.5555555556rem;
+}
+
+.answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFEB9A;
+  font-size: 1.4444444444rem;
+  line-height: 1.8888888889rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  cursor: move;
+}
+.answer--dragged {
+  background-color: #E8DAB8;
+}
+.answer--dropped {
+  position: static;
+  background-color: #FFCD02;
+}
+.answer--right {
+  background-color: #ABCC6D;
+}
+.answer--wrong {
+  background-color: #FFB4AF;
+}
+
+.droppable-area {
+  width: 100%;
+  height: 7.3333333333rem;
+  padding: 0.6111111111rem;
+  background-color: #FFF5CC;
+  border: 3px dashed #FFD734;
+  transition: background-color 0.2s ease;
+}
+.droppable-area--active {
+  background-color: #ffeb99;
+}
+
+.button-arrow {
+  position: relative;
+  width: 4.5555555556rem;
+  height: 4.5555555556rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.button-arrow::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/chevron-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem 2rem;
+  content: "";
+}
+.button-arrow:hover {
+  background-color: #333333;
+}
+.button-arrow--prev::before {
+  transform: scaleX(-1) translateX(-0.2222222222rem);
+}
+.button-arrow--next::before {
+  transform: translateX(-0.2222222222rem);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+.pagination__value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 6.1111111111rem;
+  margin: 0 0.5555555556rem;
+  padding: 1.6111111111rem;
+  text-align: center;
+  font-size: 1.3333333333rem;
+  line-height: 1.3333333333rem;
+  border-radius: 40px;
+  background-color: #E0D9B9;
+}
+
+.task {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 4.3333333333rem;
+  padding-bottom: 3.3333333333rem;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+.task__title {
+  margin-bottom: 1.7777777778rem;
+  font-family: "DrukTextWideCyr-Bold", sans-serif;
+  font-size: 3.0555555556rem;
+  line-height: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.task__description {
+  margin-bottom: 0.4444444444rem;
+  font-size: 1.7222222222rem;
+  line-height: 2.3333333333rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+.task__description--hint {
+  margin-bottom: 1.1666666667rem;
+  font-style: italic;
+}
+.task__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1.5rem;
+}
+.task__grid--drop {
+  margin-bottom: 2.4444444444rem;
+}
+.task__col {
+  padding: 0.7777777778rem 0.8888888889rem 1.6111111111rem;
+  background-color: #fff;
+}
+.task__col-title {
+  min-height: 8.2777777778rem;
+  font-size: 1.7777777778rem;
+  line-height: 2.3333333333rem;
+  font-weight: 700;
+  text-align: center;
+}
+.task__droppable-area {
+  position: relative;
+}
+.task__droppable-area:not(:last-child) {
+  margin-bottom: 0.5555555556rem;
+}
+.task__bottom-col--result {
+  text-align: right;
+}
+.task__result {
+  display: none;
+  position: relative;
+  padding: 0.1666666667rem 0.5555555556rem;
+  background-color: #FFCD02;
+  font-family: "DrukTextWideCyr-Bold", sans-serif;
+  font-size: 3.0555555556rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.task__result::after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 50vw;
+  height: 100%;
+  background-color: #FFCD02;
+  content: "";
+}
+.task--checking .task__result, .task--completed .task__result {
+  display: inline-block;
+}
+.task__answers {
+  position: relative;
+  width: 100%;
+  height: 6.1666666667rem;
+}
+.task--filled .task__answers {
+  display: none;
+}
+.task__button-box {
+  display: none;
+  text-align: center;
+}
+.task--filled .task__button-box {
+  display: block;
+}
+.task--checking .task__button-box, .task--completed .task__button-box {
+  display: none;
+}
+.task__button {
+  padding: 1.5555555556rem 1.9444444444rem;
+  border: none;
+  background-color: #FFEB9A;
+  font-family: "Formular", sans-serif;
+  font-size: 1.5555555556rem;
+  line-height: 1.4444444444rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.task__button:hover {
+  background-color: #FFCD02;
+}
+
+/*# sourceMappingURL=main.css.map */

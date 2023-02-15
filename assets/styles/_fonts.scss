@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'DrukTextWideCyr-Bold';
+  src: url('../fonts/druktextwidecyr-bold.eot'); /* IE 9 Compatibility Mode */
+  src: url('../fonts/druktextwidecyr-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+  url('../fonts/druktextwidecyr-bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/druktextwidecyr-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+  url('../fonts/druktextwidecyr-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/druktextwidecyr-bold.svg#druktextwidecyr-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Formular';
+  font-display: swap;
+  src: url('../fonts/Formular-MediumItalic.eot');
+  src: local('Formular Medium Italic'), local('Formular-MediumItalic'),
+  url('../fonts/Formular-MediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Formular-MediumItalic.woff2') format('woff2'),
+  url('../fonts/Formular-MediumItalic.woff') format('woff'),
+  url('../fonts/Formular-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Formular';
+  font-display: swap;
+  src: url('../fonts/Formular.eot');
+  src: local('Formular'),
+  url('../fonts/Formular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Formular.woff2') format('woff2'),
+  url('../fonts/Formular.woff') format('woff'),
+  url('../fonts/Formular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  font-display: swap;
+  src: url('../fonts/Formular-Medium.eot');
+  src: local('Formular Medium'), local('Formular-Medium'),
+  url('../fonts/Formular-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Formular-Medium.woff2') format('woff2'),
+  url('../fonts/Formular-Medium.woff') format('woff'),
+  url('../fonts/Formular-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Formular';
+  font-display: swap;
+  src: url('../fonts/Formular-Bold.eot');
+  src: local('Formular Bold'), local('Formular-Bold'),
+  url('../fonts/Formular-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Formular-Bold.woff2') format('woff2'),
+  url('../fonts/Formular-Bold.woff') format('woff'),
+  url('../fonts/Formular-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+

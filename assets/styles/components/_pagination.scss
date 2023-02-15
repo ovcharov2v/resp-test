@@ -1,0 +1,19 @@
+.pagination {
+  display: flex;
+  align-items: center;
+
+  &__value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: pxToRem(110);
+    margin: 0 pxToRem(10);
+    padding: pxToRem(29);
+    text-align: center;
+    font-size: pxToRem(24);
+    line-height: pxToRem(24);
+    border-radius: 40px;
+    background-color: #E0D9B9;
+  }
+}

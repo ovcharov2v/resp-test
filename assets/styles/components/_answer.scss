@@ -1,0 +1,33 @@
+.answer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-yellow;
+  font-size: pxToRem(26);
+  line-height: pxToRem(34);
+  text-align: center;
+  transition: background-color $transition-default;
+  cursor: move;
+
+  &--dragged {
+    background-color: $color-yellow-drag;
+  }
+
+  &--dropped {
+    position: static;
+    background-color: $color-yellow-active;
+  }
+
+  &--right {
+    background-color: $color-green;
+  }
+
+  &--wrong {
+    background-color: $color-red;
+  }
+}

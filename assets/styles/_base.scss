@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: #{17 / $base-font-size-value + 'vw'};
+
+  @media (min-width: #{$breakpoint + 'px'}) {
+    font-size: #{$base-font-size-value + 'px'};
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-black;
+}

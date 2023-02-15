@@ -1,0 +1,12 @@
+.droppable-area {
+  width: 100%;
+  height: pxToRem(132);
+  padding: pxToRem(11);
+  background-color: #FFF5CC;
+  border: 3px dashed #FFD734;
+  transition: background-color $transition-default;
+
+  &--active {
+    background-color: darken(#FFF5CC, 10%);
+  }
+}
